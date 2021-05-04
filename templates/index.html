@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Red Wine Prediction ML Prediction</title>
+</head>
+<body>
+    <div class="login">
+        <h1>Predict Red Wine Quality</h1>
+        <!-- Main Input for receiving Query to our ML-->
+        <form action="{{ url_for('predict')}}" method="post">
+            <input type="text" name="fixed_acidity" placeholder="fixed acidity" required="required" />
+            <input type="text" name="volatile_acidity" placeholder="volatile acidity" required="required" />
+            <input type="text" name="citric acid" placeholder="citric acid" required="required" />
+            <input type="text" name="residual sugar" placeholder="residual sugar" required="required" />
+            <input type="text" name="chlorides" placeholder="chlorides" required="required" />
+            <input type="text" name="free sulfur dioxide" placeholder="free sulfur dioxide" required="required" />
+            <input type="text" name="total sulfur dioxide" placeholder="total sulfur dioxide" required="required" />
+            <input type="text" name="density" placeholder="density" required="required" />
+            <input type="text" name="pH" placeholder="pH" required="required" />
+            <input type="text" name="sulphates" placeholder="sulphates" required="required" />
+            <input type="text" name="alcohol" placeholder="alcohol" required="required" />
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict Liner  Regression</button>
+        </form>
+        <br>
+        <br>
+        {{ prediction_text }}
+    </div>
+</body>
+</html>
